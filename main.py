@@ -1,12 +1,10 @@
 from Cryptology import SezarX
-import base64
 
 crypter = SezarX(key=22)
 
-data = "merhaba"
+with open("chad.jpeg","rb") as f:
+    encryptedData = crypter.encryptImage(f.read())
 
-encryptedData = crypter.encrypt(data)
-print(encryptedData)
-
-decryptedData = crypter.decrypt(encryptedData)
-print(decryptedData)
+    with open("chad2.png","wb") as f:
+        f.write(crypter.decryptImage(encryptedData))
+    pass

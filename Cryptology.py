@@ -38,22 +38,15 @@ class SezarX:
         return decryptedData
         pass
 
-    def encryptImage(self,path):
-        encryptedData = ""
-
-        with open(path,"rb") as f:
-            byteFormat = base64.b64encode(f.read())
-            encryptedData = self.encrypt(byteFormat.decode())
-
-        return encryptedData
+    def encryptImage(self,data):
+        byteFormat = base64.b64encode(data)
+        return self.encrypt(byteFormat.decode())
         pass
 
-    def decryptImage(self,fileName,data):
-           
-        with open(fileName,"wb") as f:
-            decryptedData = self.decrypt(data)
-            decryptedData = base64.b64decode(decryptedData)
-            f.write(decryptedData)
+    def decryptImage(self,data):
+        decryptedData = self.decrypt(data)
+        decryptedData = base64.b64decode(decryptedData)
+        return decryptedData
             
         pass
 
