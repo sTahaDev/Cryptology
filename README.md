@@ -8,12 +8,16 @@ git clone https://github.com/sTahaDev/Cryptology.git
 ## Usage
 
 ```
+#Import SezarX Algorithm
 from Cryptology import SezarX
 
+#Create New Algorithm with Your Secret Key
 crypter = SezarX(key=22)
 
+#Your Important Data
 data = "This is important message"
 
+#Encrypt and Decrypt data
 encryptedData = crypter.encrypt(data)
 decryptedData = crypter.decrypt(encryptedData)
 
