@@ -2,9 +2,10 @@ from Cryptology import SezarX
 
 crypter = SezarX(key=22)
 
-with open("chad.jpeg","rb") as f:
-    encryptedData = crypter.encryptImage(f.read())
+data = "This is important message"
 
-    with open("chad2.png","wb") as f:
-        f.write(crypter.decryptImage(encryptedData))
-    pass
+encryptedData = crypter.encrypt(data)
+decryptedData = crypter.decrypt(encryptedData)
+
+print("Decrypted Data: " + decryptedData)
+print("Encrypted Data: " + encryptedData)
