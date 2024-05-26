@@ -1,8 +1,9 @@
 ## Installation
 
 ``` 
-git clone https://github.com/sTahaDev/Cryptology/tree/master
+git clone https://github.com/sTahaDev/Cryptology.git
 ```
+> 'git' should already be downloaded
 
 ## Usage
 
